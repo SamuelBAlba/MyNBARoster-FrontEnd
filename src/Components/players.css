@@ -1,0 +1,9 @@
+.players {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}

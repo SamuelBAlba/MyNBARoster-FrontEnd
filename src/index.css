@@ -15,10 +15,31 @@ code {
 
 nav {
   background-color: rgb(226, 19, 19);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 2px 2px 4px grey;
+  margin-bottom: 1em;
+  font-family: copperplate;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+nav button {
+  border-radius: 15px;
+}
+nav a {
+  color: rgb(0, 0, 0);
 }
 
 body {
   background: blanchedalmond
+}
+
+.roster {
+  margin-left: 20px;
 }
 
 

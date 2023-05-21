@@ -1,7 +1,8 @@
 .player {
     border: solid;
+    border-color: #333533 ;
     padding: 25px;
-    background-color: antiquewhite;
+    background-color: #cfdbd5
 }
 
 img {

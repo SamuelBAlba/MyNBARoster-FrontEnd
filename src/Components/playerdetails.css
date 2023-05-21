@@ -1,7 +1,46 @@
 img {
-    width: 40%;
+    width: 50%;
 }
 
 .main {
-    text-align: center;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+
 }
+
+.left {
+    width: 70%;
+
+}
+
+.right {
+    width: 30%;
+    margin-right: 50px;
+
+
+}
+
+.attributes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10px;
+};
+
+.buttons {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+
+
+
+
+  
+
+
+
+
+

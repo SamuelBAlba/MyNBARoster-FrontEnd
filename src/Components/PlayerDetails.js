@@ -8,6 +8,7 @@ const API = process.env.REACT_APP_API_URL;
 export default function PlayerDetails() {
     const [singlePlayer, setSinglePlayer] = useState([]);
     const [showConfirmation, setShowConfirmation] = useState(false)
+    const [playerBadge, setPlayerBadge] = useState([])
     const { id } = useParams();
     let navigate = useNavigate();
 
@@ -16,6 +17,7 @@ export default function PlayerDetails() {
 
             .then((response) => {
                 setSinglePlayer(response.data)
+                playerInfo(response.data)
             }).catch((e) => {
                 console.warn("catch", e)
             })
@@ -33,22 +35,44 @@ export default function PlayerDetails() {
         setShowConfirmation(true)
     };
 
+    const playerInfo = (singlePlayer) => {
+        const badges = []
 
+        if (singlePlayer.shooting >= 80 && singlePlayer.dunking >= 80) {
+            badges.push('Player is a Scorer')
+        } else if (singlePlayer.shooting > 80) {
+            badges.push('Player is a Shooter')
+        } else if (singlePlayer.dunking > 80) {
+            badges.push('Player is a Dunker')
+        } if (singlePlayer.passing > 80) {
+            badges.push('Player is a Facilitator')
+        } if (singlePlayer.dribble >= 80 & singlePlayer.shooting >= 80) {
+            badges.push('Player is a Shot Creator')
+        } if (singlePlayer.defense >= 80) {
+            badges.push('Player is a Defender')
+        }
+
+        setPlayerBadge(badges)
+    
+    }
+    
     return (
         <div className='details'>
 
             <div className='main'>
                 <div className='left'>
-                <img src={singlePlayer.img}/>
+                <img src={singlePlayer.img} alt={singlePlayer.name}/>
                 <h2>{singlePlayer.name} - {singlePlayer.position} </h2>
-                <p>is active</p>
+                <p>{singlePlayer.is_active ? "Player is currently active" : "Player is not active"}</p>
                 </div>
 
                 <div className='right'>
-                    <ol>
-                        <li>Player is a scorred</li>
-                        <li>player is a passer</li>
-                    </ol>
+                    <h2>Player Badges</h2>
+                    <ul>
+                        {playerBadge.map((badge, index) => {
+                            return <li key={index}>{badge}</li>
+                        })}
+                    </ul>
                 </div>
             </div>
 

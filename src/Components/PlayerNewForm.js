@@ -55,7 +55,6 @@ export default function PlayerNewForm() {
                 placeholder="Name of Player"
                 required
                 />
-                <br/>
   
                 <label htmlFor="position">Position:</label>
                 <select id="position" value={player.position} onChange={handleTextChange}>
@@ -67,9 +66,12 @@ export default function PlayerNewForm() {
                     <option value="C">C</option>
                 </select>
 
-                <br/>
-                <br/>
-
+                <label htmlFor="is_active">Is Active:</label>
+                <select id="is_active" value={player.is_active} onChange={handleTextChange}>
+                    <option value="">Is Player Active?</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
 
                 <label htmlFor="shooting">Shooting:</label>
                 <input

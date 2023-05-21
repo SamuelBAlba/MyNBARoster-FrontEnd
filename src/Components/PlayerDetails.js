@@ -29,9 +29,9 @@ export default function PlayerDetails() {
             .catch((c) => console.warn("catch", c))
     };
 
-    const handleDelete = () => {
-        setShowConfirmation(true)
-    };
+    // const handleDelete = () => {
+    //     setShowConfirmation(true)
+    // };
 
 
     return (
@@ -49,10 +49,7 @@ export default function PlayerDetails() {
                         <li>Player is a scorred</li>
                         <li>player is a passer</li>
                     </ol>
-
                 </div>
-
-
             </div>
 
             <div className='attributes'>
@@ -64,6 +61,18 @@ export default function PlayerDetails() {
                 <p>Rebound: {singlePlayer.rebound}</p>
                 <p>Steal: {singlePlayer.steal}</p>
             </div>
+
+            <div className='buttons'>
+                <Link to='/players'>
+                    <button>Back</button>
+                </Link>
+
+                <Link to={`/players/${id}/edit`}>
+                    <button>Edit</button>
+                </Link>
+                <button onClick={deletePlayer}>Delete</button>
+            </div>
         </div>
+        
     )
 }

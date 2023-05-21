@@ -21,18 +21,18 @@
   }
   
   input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
+    background-color: #cfdbd5;
+    color: #242423;
     cursor: pointer;
   }
   
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #f5cb5c;
   }
 
   .back {
-    background-color: #f2f2f2;
-    color: #4caf50;
+    background-color: #cfdbd5;
+    color: #242423;
     cursor: pointer;
     padding: 8px 16px;
     border: none;
@@ -43,6 +43,6 @@
   }
   
   .back:hover {
-    background-color: #e0e0e0;
+    background-color: #f5cb5c;
   }
   

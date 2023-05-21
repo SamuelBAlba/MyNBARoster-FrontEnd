@@ -7,3 +7,20 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.Sort {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 40px;
+
+}
+
+.Sort button {
+    width: 50%;
+    margin-left: 60px;
+    background-color: #cfdbd5;
+}
+
+.back:hover {
+    background-color: #f5cb5c;
+  }

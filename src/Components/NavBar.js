@@ -5,11 +5,13 @@ export default function NavBar() {
         <div>
             <nav>
                 <h1>
-                    <Link to="/players">My Roster</Link>
+                    <Link to="/players">All Players</Link>
                 </h1>
-                <button>
-                    <Link to="/players/new">Add a Player</Link>
-                </button>
+                <h1>My NBA Roster</h1>
+                <h1>
+                    <Link to="/players/new">Add Player</Link>
+                </h1>
+
             </nav>  
         </div>
     )

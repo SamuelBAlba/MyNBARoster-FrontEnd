@@ -1,4 +1,4 @@
-.new {
+.edit {
     max-width: 400px;
     margin: 0 auto;
   }
@@ -45,4 +45,3 @@
   .back:hover {
     background-color: #e0e0e0;
   }
-  

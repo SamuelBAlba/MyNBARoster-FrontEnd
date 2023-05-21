@@ -29,9 +29,9 @@ export default function PlayerDetails() {
             .catch((c) => console.warn("catch", c))
     };
 
-    // const handleDelete = () => {
-    //     setShowConfirmation(true)
-    // };
+    const handleDelete = () => {
+        setShowConfirmation(true)
+    };
 
 
     return (
@@ -70,8 +70,19 @@ export default function PlayerDetails() {
                 <Link to={`/players/${id}/edit`}>
                     <button>Edit</button>
                 </Link>
-                <button onClick={deletePlayer}>Delete</button>
+                <button onClick={handleDelete}>Delete</button>
             </div>
+            {showConfirmation && (
+                    <div>
+                        <p>Are you sure you want to delete this player?</p>
+                        <button onClick={() => {
+                            deletePlayer();
+                            setShowConfirmation(false);
+                        }}>Yes</button>
+                        <button onClick={() => setShowConfirmation(false)}>No</button>
+                    </div>
+                )}
+
         </div>
         
     )

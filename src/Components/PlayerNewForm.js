@@ -1,7 +1,7 @@
 import axios from "axios";
 import './playernewform.css'
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -57,8 +57,8 @@ export default function PlayerNewForm() {
                 />
                 <br/>
   
-                <label htmlFor="type">Position:</label>
-                <select id="type" value={player.position} onChange={handleTextChange}>
+                <label htmlFor="position">Position:</label>
+                <select id="position" value={player.position} onChange={handleTextChange}>
                     <option value="">Select a position</option>
                     <option value="PG">PG</option>
                     <option value="SG">SG</option>
@@ -150,6 +150,8 @@ export default function PlayerNewForm() {
                 <br/>
                 <input type="submit"/>
             </form>
+
+            <Link to={`/players`}><button className="back">Back</button></Link>
         </div>
     )
 }

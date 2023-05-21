@@ -3,7 +3,7 @@ import Players from "../Components/Players";
 function index() {
     return (
         <div>
-            <h1>All Players</h1>
+            <h1 className="roster">Roster</h1>
             <Players/>
         </div>
     )

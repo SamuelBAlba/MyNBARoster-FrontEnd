@@ -97,7 +97,7 @@ export default function PlayerDetails() {
                 <button onClick={handleDelete}>Delete</button>
             </div>
             {showConfirmation && (
-                    <div>
+                    <div className='confirm'>
                         <p>Are you sure you want to delete this player?</p>
                         <button onClick={() => {
                             deletePlayer();

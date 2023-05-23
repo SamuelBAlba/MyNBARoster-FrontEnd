@@ -14,7 +14,6 @@ export default function Players() {
             .then((response) => {
                 setPlayers(response.data);
                 setOriginalPlayers(response.data)
-                console.log(players)
             })
             .catch((e) => console.warn("catch", e));
     }, []);

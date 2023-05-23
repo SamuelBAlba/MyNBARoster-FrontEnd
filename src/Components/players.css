@@ -19,7 +19,15 @@
     width: 50%;
     margin-left: 60px;
     background-color: #cfdbd5;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
+
+.Sort :hover {
+    background-color: #f5cb5c;
+  }
 
 .back:hover {
     background-color: #f5cb5c;

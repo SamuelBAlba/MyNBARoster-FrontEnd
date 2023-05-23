@@ -39,8 +39,31 @@ img {
   .buttons button {
     width: 10%;
     margin-left: 150px;
-
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
+
+  .buttons button:hover {
+    background-color: #f5cb5c;
+  }
+
+  .confirm button {
+
+    width: 10%;
+    margin-left: 150px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .confirm button:hover {
+    background-color: #f5cb5c;
+  }
+
+
   
 
 

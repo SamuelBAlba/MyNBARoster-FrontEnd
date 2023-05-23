@@ -19,6 +19,7 @@ https://trello.com/b/0C82hZbA/mynbaroster
 - Backend: https://github.com/SamuelBAlba/MyNBARoster-BackEnd
 
 ### Netlify
+https://funny-palmier-d55cf8.netlify.app/
 
 
 
